@@ -1,0 +1,72 @@
+<div class="container-fluid">
+    <!-- <div class="alert alert-danger" *ngIf="pageError!='' && showError">
+        {{pageError}}
+        <button class="material-icons" style="float:right" (click)="closebar()">close</button>
+    </div> -->
+    <div class="row">
+        <!--left pane-->
+        <div class="col-lg-3 col-md-3 col-sm-12" id="left-pane">
+            <div class="d-flex flex-column">
+                <div class="p-2 "><a class="btn" style="background-color: aliceblue;border:1.5px solid black;"routerLink="/profile">My Profile</a></div>
+                <div class="p-2 "><a class="btn" style="background-color: aliceblue;border:1.5px solid black;" routerLink="/addOffer">Post an offer</a></div>
+                <div class='p-2'><a class="btn" style="background-color: aliceblue;border:1.5px solid black;" routerLink="/myOffers">My offers</a></div>
+                <div class='p-2'><a class="btn" style="background-color: aliceblue;border:1.5px solid black;" routerLink="/totalOffers">Total offers</a></div>
+                <!-- <div class="p-2 "><a class="btn btn-outline-primary" (click)="showRecentlyLiked()">view recently liked offers</a></div> -->
+            </div>
+        </div>
+
+        <!--right pane-->
+        <div class="col-lg-9 col-md-9 col-sm-12 " id="right-pane " style="padding-top:20px; ">
+
+            <!-- options -->
+            <div class="d-flex flex-row justify-content-between" style="width:80%;margin:auto ">
+
+                <!-- filter by category-->
+                <div class="p-2 filterbycat">
+                    <div class="filterbycat" style="width:150px;height:10px;border:1.5px solid black;">
+                        <select style="height:33px;" class="form-control" (change)="onCategoryChange()" #category>
+                            <option selected style="font-weight: bolder;">Filter by category</option>
+                            <option>Electronics</option>
+                            <option>Plants</option>
+                            <option>Furniture</option>
+                            <option>Accessories</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- filter by top likes-->
+                <div class="p-2 ">
+                    <button class="btn filterbytop" style="border:1.5px solid black;" (click)="filterByTopLikes()">Filter by top likes</button>
+                </div>
+
+                <!-- filter by posted date-->
+                <div class='p-2'>
+                    <div class='input-group'>
+                        <input type='text' class='form-control' style="margin-right: 10px; border:1.5px solid black;" placeholder="filter by posted-date" #postedDate>
+                        <div class="input-group-append ">
+                            <button class="btn btn-primary"  (click)="filterByPostedDate()">search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- offers-->
+            <div class="row" style="width:90%;margin:auto">
+                <div *ngFor="let offer of offers " class="offer-content">
+                    <h6 class="card-title " style="background:rgba(235, 184, 17, 0.993);color:white;padding:10px;font-weight: bold; ">{{offer.name}}</h6>
+                    <p class="card-text ">
+                        <div class="d-flex flex-column ">
+                            <div class="p-2 " style="color:white;"><b style="color:white;">Posted on</b>: {{offer.openDate | date:'longDate'}}</div>
+                            <div class="p-2 " style="color:white;"><b>Engaged</b>: {{offer.engagedDate==null && offer.closedDate == null?'not yet':'engaged'}}
+                            </div>
+                            <div class="p-2" style="color:white;"><b>Status</b>: {{offer.closedDate == null ? 'open':'closed'}}</div>
+                            <div class="p-2" style="color:white;"><b>Category:</b> {{offer.category}}</div>
+                            <div class="p-2" style="color:white;"><b>Likes:</b> {{offer.likes}}</div>
+                        </div><br>
+                        <a [routerLink]="['/offerDetails',offer.id]" class="btn btn-success">Open</a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>

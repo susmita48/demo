@@ -1,0 +1,10 @@
+.offer-details-content {
+    margin-top: 2%;
+    background-color:rgb(110, 59, 97);
+    padding: 2%;
+    height: 400px;
+}
+
+.offer-details-content>h1 {
+    font-weight: 100;
+}

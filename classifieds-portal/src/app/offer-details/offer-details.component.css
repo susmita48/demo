@@ -1,0 +1,36 @@
+.offer-details-content {
+    width: 80%;
+    /* margin: 3% auto; */
+    height: 560px;
+    width: 1425px;
+    margin-left: -5%;
+    margin-top: 3%;
+    padding: 25px;
+    background-color:rgb(44, 157, 228);
+    color: rgb(255, 255, 255);
+}
+
+.offer-details-content>h1 {
+    font-size: 50px;
+    font-weight: 100;
+    margin-bottom: 20px;
+    color:rgb(242, 245, 253);
+}
+
+span {
+    display: inline-block;
+}
+
+.material-icons {
+    font-size: 30px;
+    margin-top: 5px;
+    position: relative;
+    display: inline-block;
+}
+
+.offer-details-content>button {
+    margin-left: 10px;
+}
+
+
+    

@@ -1,0 +1,49 @@
+.login-content {
+    width: 40%;
+    margin: 5% 30%;
+    padding: 50px 40px;
+    color:rgba(194, 155, 249, 0.993);
+    background-color: rgb(0, 0, 0);
+    border-radius: 5%;
+}
+
+.login-content>h1 {
+    margin-bottom: 20px;
+}
+
+.login-content>form>input {
+    margin-bottom: 20px;
+}
+
+.login-content>form>label {
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+
+.login-content>form>button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    width: 518px;
+}
+
+.alert.alert-danger {
+    padding: 10px;
+}
+
+button {
+    background:rgb(131, 84, 193) !important;
+    color:whitesmoke !important;
+    width:fit-content;
+    font-weight:bold;
+    font-size: medium;
+}
+
+.container-fluid{
+    margin-top: -5%;
+    height: 750px;
+    background-color: black;
+}
+
+.formerror{
+    margin-top: 5%;
+}

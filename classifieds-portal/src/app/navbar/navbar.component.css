@@ -1,0 +1,25 @@
+.navbar-nav {
+    margin-right: 50px;
+}
+
+.navbar-nav>li {
+    margin-right: 30px;
+}
+
+nav {
+    background-color: rgba(255, 255, 255, 0.993) !important;
+}
+
+a.nav-link {
+    opacity: 1 !important;
+    color: black !important;
+    font-weight: bold;
+}
+
+/* a.nav-link:hover{
+    color: yellow;
+} */
+.navbar-brand{
+    color: black;
+    font-style:oblique;
+}
